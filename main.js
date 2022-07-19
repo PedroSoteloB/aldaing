@@ -23,6 +23,10 @@ window.addEventListener("resize", () => {
     enableNavigation("fit-content");
     nav.classList.remove("is-enabled");
     hamburgerBtn.classList.remove("is-active");
+
+    // in case menu was open set body to allow scroll
+    const body = document.querySelector("body");
+    body.classList.remove("menu-open");
   } else {
     if (nav.classList.length !== 2) {
       hideNavigation();
@@ -44,16 +48,16 @@ const enableNavigation = (height) => {
   nav.style.visibility = "visible";
 };
 
-/* ! SLIDER CODE */
+/* ===
+SLIDER
+=== */
 
 const sliders = document.querySelectorAll(".slider__title");
 const slidersContent = document.querySelectorAll(".slider-content-item");
 
 sliders.forEach((element) => {
-  console.log(element);
-  element.addEventListener("click", (element) => {
-    console.log(element);
-    changeSlider(element);
+  element.addEventListener("click", (event) => {
+    changeSlider(event);
   });
 });
 
@@ -61,28 +65,34 @@ function changeSlider(sliderClicked) {
   removeSliderActive();
   hideSliderContent();
 
+  // add border
   sliderClicked.target.classList.add("slider-item--enabled");
 
   let sliderClickedContent = document.querySelector(
     `#${sliderClicked.target.id}-content`
   );
 
+  // show its content
   sliderClickedContent.classList.add("slider-show");
 }
 
+// hide all borders
 function removeSliderActive() {
   sliders.forEach((element) => {
     element.classList.remove("slider-item--enabled");
   });
 }
 
+// hide all content
 function hideSliderContent() {
   slidersContent.forEach((element) => {
     element.classList.remove("slider-show");
   });
 }
 
-/* ! faq */
+/* ====
+FAQ
+=== */
 const allQuestions = document.querySelectorAll(".question");
 
 allQuestions.forEach((element) => {
@@ -91,6 +101,7 @@ allQuestions.forEach((element) => {
   });
 });
 
+// toggle question answer to display none/flex using class names
 function toggleQuestion(element) {
   const questionId = element.id;
 
