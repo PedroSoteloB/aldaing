@@ -390,14 +390,24 @@
             Stay up-to-date with what we're doing
           </h2>
 
-          <form action="" class="newsletter__form">
+          <form
+            name="newsletter"
+            class="newsletter__form"
+            method="POST"
+            action="/index.html"
+            data-netlify="true"
+          >
             <input
               class="newsletter-input text-neutral-700"
               type="email"
+              name="email"
               placeholder="Enter your email address"
               required
             />
-            <button class="button text-primary-100 bg-primary-500 btn--red">
+            <button
+              class="button text-primary-100 bg-primary-500 btn--red"
+              type="submit"
+            >
               Contact Us
             </button>
           </form>
