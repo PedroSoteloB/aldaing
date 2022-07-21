@@ -1,0 +1,51 @@
+:root {
+  --clr-white: #ffffff;
+  --clr-dark: #1a1818;
+}
+
+/* ! DARK MODE ESSENTIALS */
+body.dark-mode .top-dark-mode-button .moon {
+  transform: translateY(-30px);
+  transition: 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.dark-mode .top-dark-mode-button .moon {
+  transform: translateY(-30px);
+  transition: 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.dark-mode .top-dark-mode-button .sun {
+  transform: translateY(0) !important;
+  transition: 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Begin adding your dark mode styles here, like so: */
+
+body.dark-mode {
+  background: var(--clr-dark);
+  color: var(--clr-white);
+}
+
+body.dark-mode a {
+  color: var(--clr-white);
+}
+
+body.dark-mode .header__logo {
+  fill: var(--clr-white);
+}
+
+body.dark-mode .header__hamburger-inner,
+body.dark-mode .header__hamburger-inner::after,
+body.dark-mode .header__hamburger-inner::before {
+  background-color: var(--clr-white);
+}
+
+body.dark-mode .primary-navigation {
+  background-color: var(--clr-dark);
+}
