@@ -1,3 +1,13 @@
+const scrollUpBtn = document.querySelector(".scrollupBtn");
+
+scrollUpBtn.addEventListener("click", () => {
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
+
 const hamburgerBtn = document.querySelector(".header__hamburger");
 const navBar = document.querySelector(".primary-navigation");
 
@@ -47,6 +57,35 @@ const enableNavigation = (height) => {
   nav.style.opacity = "1";
   nav.style.visibility = "visible";
 };
+
+/* ===
+deals with user the navigation bar options AND
+checks if user reached the bottom of the page
+=== */
+
+window.addEventListener("scroll", () => {
+  if (Math.round(window.scrollY) > 10) {
+    hideNavigation();
+    document.querySelector("body").classList.remove("menu-open");
+    hamburgerBtn.classList.remove("is-active");
+
+    const nav = document.querySelector(".primary-navigation");
+    nav.classList.remove("is-enabled");
+  } else if (window.innerWidth >= "900") {
+    enableNavigation("fit-content");
+  }
+
+  // reached bottom
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    scrollUpBtn.classList.add("active");
+    // not at bottom
+  } else if (
+    window.innerHeight + window.scrollY <=
+    document.body.offsetHeight
+  ) {
+    scrollUpBtn.classList.remove("active");
+  }
+});
 
 /* ===
 SLIDER
@@ -113,3 +152,40 @@ function toggleQuestion(element) {
   const questionIcon = document.querySelector(`#${questionId} .question-arrow`);
   questionIcon.classList.toggle("enabled");
 }
+
+/* ===  
+DARK MODE CODE 
+===*/
+
+/* Body */
+const body = document.querySelector("body");
+
+// Dark Mode Action
+let darkMode = localStorage.getItem("darkMode");
+const darkModeToggle = document.querySelector(".dark-mode-button");
+
+// Enable Dark Mode
+const enableDarkMode = () => {
+  body.classList.add("dark-mode");
+  localStorage.setItem("darkMode", "enabled");
+};
+
+// Disable Dark Mode
+const disableDarkMode = () => {
+  body.classList.remove("dark-mode");
+  localStorage.setItem("darkMode", null);
+};
+
+if (darkMode == "enabled") {
+  enableDarkMode();
+}
+
+// Desktop Button
+darkModeToggle.addEventListener("click", () => {
+  darkMode = localStorage.getItem("darkMode");
+  if (darkMode !== "enabled") {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+});
