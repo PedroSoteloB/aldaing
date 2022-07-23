@@ -187,6 +187,7 @@ svg {
   border-radius: 5px;
   height: 40px;
   font-weight: var(--fw-medium);
+  transition: background-color 0.3s ease-in;
 }
 
 .button--darktext {
@@ -206,8 +207,7 @@ svg {
 
 .button--darktext:hover {
   background-color: transparent;
-  color: var(--clr-neutral-800);
-  border: 1px solid;
+  border: 1px solid darkgray !important;
 }
 
 /* ! header */
@@ -307,11 +307,17 @@ svg {
     align-items: center;
     width: 100%;
     height: fit-content;
-    gap: 2.5em;
+    gap: 2em;
+  }
+}
+
+@media (min-width: 1050px) {
+  .nav-list-item:nth-of-type(4) {
+    margin-right: 10px;
   }
 
-  .nav-list-item:nth-of-type(4) {
-    margin-right: 60px;
+  .nav-list {
+    gap: 2.5em;
   }
 }
 
@@ -354,13 +360,13 @@ svg {
 .hero-img-container::before {
   content: "";
   position: absolute;
-  right: -5%;
   background-color: var(--clr-primary-400);
-  width: 85%;
-  height: 80%;
   border-bottom-left-radius: 35%;
   z-index: -1;
-  bottom: -5%;
+  left: 20%;
+  top: 4.2em;
+  width: 105vw;
+  height: 80%;
 }
 
 .hero__img {
@@ -429,9 +435,10 @@ svg {
   }
 
   .hero-img-container::before {
-    right: -25%;
-    height: 80%;
-    top: 28%;
+    left: 40%;
+    top: 8.2em;
+    width: 100vw;
+    border-bottom-left-radius: 12em;
   }
 }
 
@@ -530,14 +537,14 @@ svg {
 
 .slider-img-container::before {
   content: "";
-  position: absolute;
-  left: -10%;
-  background-color: var(--clr-primary-400);
-  width: 95%;
-  height: 100%;
-  border-bottom-right-radius: 30%;
   z-index: -1;
-  top: 17%;
+  position: absolute;
+  right: 20%;
+  top: 3em;
+  background-color: var(--clr-primary-400);
+  border-bottom-right-radius: 30%;
+  width: 100vw;
+  height: 100%;
 }
 
 @media (min-width: 950px) {
@@ -587,9 +594,14 @@ svg {
   }
 
   .slider-img-container::before {
-    left: -52%;
-    width: 98%;
+    right: 50%;
+    top: 3.2em;
     height: 100%;
+    border-bottom-right-radius: 9em;
+  }
+
+  .slider-content-item:nth-last-of-type(2) .slider-img-container::before {
+    border-bottom-right-radius: 9em;
   }
 }
 
@@ -722,6 +734,7 @@ svg {
 
 .question-arrow {
   stroke: var(--clr-primary-400);
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .question-arrow.enabled {
@@ -908,7 +921,7 @@ svg {
 .top-dark-mode-button {
   position: absolute;
   top: 1.4em;
-  right: 4.5em;
+  right: 4.7em;
   z-index: 100001;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -922,6 +935,10 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.top-dark-mode-button:hover {
+  opacity: 0.5;
 }
 
 .dark-mode-button svg {
@@ -956,6 +973,7 @@ svg {
 /* =========== 
 ! MENU BTNS
 =========== */
+
 .header__hamburger {
   display: inline-block;
   cursor: pointer;

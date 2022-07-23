@@ -25,7 +25,16 @@ body.dark-mode .top-dark-mode-button .sun {
   visibility: visible;
 }
 
-/* Begin adding your dark mode styles here, like so: */
+/* ! change utility class color */
+body.dark-mode .text-neutral-700 {
+  color: rgb(180, 180, 180);
+}
+
+body.dark-mode .button--darktext:hover {
+  color: darkgray;
+}
+
+/* ! other styles */
 
 body.dark-mode {
   background: var(--clr-dark);
