@@ -1120,7 +1120,7 @@ svg {
   flex-direction: column;
   gap: 0.75em;
   background-color: var(--clr-neutral-800);
-  color: var(--clr-primary-100);
+  color: var();
   padding: 2em;
 }
 
