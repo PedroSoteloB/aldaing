@@ -58,3 +58,7 @@ body.dark-mode .header__hamburger-inner::before {
 body.dark-mode .primary-navigation {
   background-color: var(--clr-dark);
 }
+
+body.dark-mode .nav-list-item--active {
+  color: var(--clr-primary-500);
+}
