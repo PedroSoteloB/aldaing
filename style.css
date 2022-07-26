@@ -1083,7 +1083,7 @@ svg {
 ============================= */
 
 .contact {
-  padding: 3em 0em;
+  padding: 4em 0em;
   width: 100%;
 }
 
@@ -1097,7 +1097,7 @@ svg {
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
-  gap: 2.5em;
+  gap: 3.5em;
 }
 
 .contact__heading,
@@ -1118,10 +1118,9 @@ svg {
 .contact__col:last-of-type {
   display: flex;
   flex-direction: column;
-  gap: 0.75em;
-  background-color: var(--clr-neutral-800);
-  color: var();
+  gap: 1.25em;
   padding: 2em;
+  border-radius: 0.5em;
 }
 
 .contact__infoHeading {
@@ -1138,7 +1137,7 @@ svg {
   display: block;
   border-left: 5px solid var(--clr-primary-400);
   padding-left: 0.75em;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.5em;
   font-size: 1.25rem;
 }
 
@@ -1159,6 +1158,12 @@ svg {
   font-size: var(--fs-300);
   border: 1px solid var(--clr-neutral-700);
   width: 100%;
+}
+
+.contact-form-input:focus,
+.contact-form-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px var(--clr-primary-400);
 }
 
 .contact-form-input {
@@ -1187,25 +1192,15 @@ svg {
   }
 
   .contact__col:first-of-type {
-    flex: 0.9;
+    flex: 0.8;
+  }
+
+  .contact__col:last-of-type {
+    gap: 1.8em;
   }
 
   .contactBtn {
     width: 30%;
     align-self: flex-end;
-  }
-}
-
-@media (min-width: 1250px) {
-  .contact__col:first-of-type {
-    flex: 0.8;
-  }
-
-  .contact__infoHeading {
-    padding-left: 0;
-  }
-
-  .contact--titles {
-    border-left: 0;
   }
 }
