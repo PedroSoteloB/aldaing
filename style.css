@@ -37,7 +37,7 @@
   /* --vh: 0; */
 }
 
-@media (min-width: 50em) {
+@media (min-width: 56.25em) {
   :root {
     --fs-nav: var(--fs-300);
     --fs-body: var(--fs-500);
@@ -312,6 +312,10 @@ svg {
     width: 100%;
     height: fit-content;
     gap: 2em;
+  }
+
+  .header__container {
+    height: 120px;
   }
 }
 
@@ -969,8 +973,7 @@ svg {
 @media (min-width: 900px) {
   .dark-mode-button {
     right: 7%;
-    top: 1.55em;
-    top: 1.4em;
+    top: 2.65em;
   }
 }
 
