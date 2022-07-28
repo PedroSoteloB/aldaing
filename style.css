@@ -42,6 +42,11 @@
     --fs-nav: var(--fs-300);
     --fs-body: var(--fs-500);
     --fs-secondary-heading: var(--fs-800);
+  }
+}
+
+@media (min-width: 70em) {
+  :root {
     --fs-primary-heading: var(--fs-900);
   }
 }
@@ -171,7 +176,7 @@ svg {
   max-width: 1114px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1100px) {
   .container {
     width: 75%;
   }
@@ -312,6 +317,7 @@ svg {
     width: 100%;
     height: fit-content;
     gap: 2em;
+    margin-right: 4em;
   }
 
   .header__container {
@@ -326,6 +332,12 @@ svg {
 
   .nav-list {
     gap: 2.5em;
+  }
+}
+
+@media (min-width: 1100px) {
+  .nav-list {
+    margin-right: 0em;
   }
 }
 
@@ -409,7 +421,7 @@ svg {
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 950px) {
   .hero__container {
     flex-direction: row-reverse;
     align-items: center;
@@ -432,7 +444,7 @@ svg {
     width: 120%;
     max-width: 100%;
     margin: none;
-    margin-left: 8em;
+    margin-left: 3em;
   }
 
   .hero__buttons {
@@ -443,10 +455,21 @@ svg {
   }
 
   .hero-img-container::before {
-    left: 40%;
-    top: 8.2em;
+    left: 30%;
+    top: 5em;
     width: 100vw;
     border-bottom-left-radius: 12em;
+  }
+}
+
+@media (min-width: 1100px) {
+  .hero-img-container {
+    margin-left: 8em;
+  }
+
+  .hero-img-container::before {
+    left: 40%;
+    top: 8.2em;
   }
 }
 
@@ -660,9 +683,9 @@ svg {
   width: 100%;
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 950px) {
   .extension__container {
-    width: 65%;
+    width: 75%;
   }
 
   .extensions__subheading {
@@ -683,6 +706,12 @@ svg {
 
   .extension:nth-child(3) {
     align-self: flex-end;
+  }
+}
+
+@media (min-width: 1150px) {
+  .extension__container {
+    width: 65%;
   }
 }
 
@@ -893,10 +922,11 @@ svg {
   animation: fadeInHeadings 0.85s normal forwards;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 950px) {
   .footer {
     padding: 3em 0em;
   }
+
   .footer__container {
     flex-direction: row;
     justify-content: space-between;
@@ -920,8 +950,17 @@ svg {
     right: 5%;
     bottom: 32%;
   }
+
+  .footer__socials-list {
+    margin-right: 5em;
+  }
 }
 
+@media (min-width: 1100px) {
+  .footer__socials-list {
+    margin-right: 0;
+  }
+}
 /* =========== 
 ! LIGHT AND DARK MODES
 ========= */
