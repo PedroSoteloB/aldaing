@@ -7,8 +7,6 @@ export default defineConfig({
         main: "./index.html",
         contact: "./contact.html",
         fonts: "./fonts/",
-        // ...
-        // List all files you want in your build
       },
     },
   },
