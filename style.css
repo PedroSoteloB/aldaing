@@ -1,25 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
-
 :root {
-  /* colors */
   --clr-primary-100: hsl(0, 0%, 100%);
   --clr-primary-400: hsl(231, 69%, 60%);
   --clr-primary-500: hsl(0, 94%, 66%);
-
   --clr-neutral-700: hsl(229, 8%, 60%);
   --clr-neutral-800: hsl(229, 31%, 21%);
 
-  /* font family */
   --ff-primary: "Rubik", sans-serif;
   --ff-secondary: "Rubik", sans-serif;
-
   --ff-body: var(--ff-primary);
 
-  /* font weight */
   --fw-regular: 400;
   --fw-medium: 500;
 
-  /* font size */
   --fs-300: 0.875rem;
   --fs-400: 1rem;
   --fs-500: 1.125rem;
@@ -27,14 +19,11 @@
   --fs-700: 1.5rem;
   --fs-800: 1.875rem;
   --fs-900: 2.75rem;
-
   --fs-button: var(--fs-300);
   --fs-body: var(--fs-400);
   --fs-nav: var(--fs-600);
   --fs-secondary-heading: var(--fs-700);
   --fs-primary-heading: var(--fs-800);
-
-  /* --vh: 0; */
 }
 
 @media (min-width: 56.25em) {
@@ -51,33 +40,27 @@
   }
 }
 
-/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove default margin */
 * {
   margin: 0;
   padding: 0;
   font: inherit;
 }
 
-/* Remove list styles on ul, ol elements with a list role, 
-which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
 }
 
-/* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -89,12 +72,10 @@ body.menu-open {
   overflow: hidden;
 }
 
-/* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
 img,
 picture,
 svg {
@@ -103,7 +84,6 @@ svg {
 }
 
 /* ? utility classes */
-
 .text-primary-100 {
   color: var(--clr-primary-100);
 }
@@ -169,7 +149,6 @@ svg {
 }
 
 /* ? html styling */
-
 .container {
   width: 90%;
   margin: 0 auto;
@@ -182,7 +161,6 @@ svg {
   }
 }
 
-/* ! buttons */
 .button {
   font-size: var(--fs-button);
   border: none;
@@ -216,7 +194,6 @@ svg {
 }
 
 /* ! header */
-
 .header {
   display: flex;
   align-items: center;
@@ -242,7 +219,6 @@ svg {
   display: flex;
   align-items: center;
   transition: height 0.4s ease-in-out;
-  /* ! menu closed defaults */
   height: 0;
   visibility: hidden;
   opacity: 0;
@@ -346,7 +322,6 @@ svg {
 }
 
 /* ! HERO */
-
 .hero {
   width: 100%;
   overflow: hidden;
@@ -474,7 +449,6 @@ svg {
 }
 
 /* ! FEATURES */
-
 .features {
   padding-top: 2em;
   padding-bottom: 4em;
@@ -637,7 +611,6 @@ svg {
 }
 
 /* ! extensions */
-
 .extensions {
   padding: 5em 0em;
 }
@@ -716,7 +689,6 @@ svg {
 }
 
 /* ! faq */
-
 .faq {
   padding: 4em 0em;
   padding-bottom: 7em;
@@ -791,7 +763,6 @@ svg {
 }
 
 /* ! newsletter */
-
 .newsletter {
   padding: 3em 0em;
 }
@@ -851,7 +822,6 @@ svg {
 }
 
 /* ! footer */
-
 .footer {
   padding: 3.5em 0em;
   position: relative;
@@ -961,10 +931,8 @@ svg {
     margin-right: 0;
   }
 }
-/* =========== 
-! LIGHT AND DARK MODES
-========= */
 
+/* ! LIGHT AND DARK MODES  */
 .top-dark-mode-button {
   position: absolute;
   top: 1.4em;
@@ -1016,10 +984,7 @@ svg {
   }
 }
 
-/* =========== 
-! MENU BTNS
-=========== */
-
+/*  ! MENU BTNS */
 .header__hamburger {
   display: inline-block;
   cursor: pointer;
@@ -1120,10 +1085,7 @@ svg {
   }
 }
 
-/*  ======================== 
- ! CONTACT PAGE
-============================= */
-
+/* ! Contact Page */
 .contact {
   padding: 4em 0em;
   width: 100%;

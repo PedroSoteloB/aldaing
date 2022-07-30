@@ -9,6 +9,13 @@
       content="A simple bookmark manager with a clean and simple interface to organize your favourite websites. Try it now for free!"
     />
     <link rel="canonical" href="https://landing-bookmarkpage.netlify.app/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="images/illustration-hero.svg" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/dark.css" />
     <title>Bookmark | Bookmark manager extension</title>
@@ -188,6 +195,7 @@
                     alt=""
                     class="slider__img"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -213,6 +221,7 @@
                     alt=""
                     class="slider__img"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -238,6 +247,7 @@
                     alt=""
                     class="slider__img"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -273,12 +283,18 @@
                 alt="Chrome logo"
                 loading="lazy"
                 class="extension-logo"
+                decoding="async"
               />
               <h3 class="extention__title fs-600 fw-medium">Add to Chrome</h3>
               <p class="extension__version text-neutral-700">
                 Minimum version 62
               </p>
-              <img src="images/bg-dots.svg" alt="" loading="lazy" />
+              <img
+                src="images/bg-dots.svg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
               <button class="button bg-primary-400">
                 Add & Install Extension
               </button>
@@ -289,12 +305,18 @@
                 alt="Firefox logo"
                 loading="lazy"
                 class="extension-logo"
+                decoding="async"
               />
               <h3 class="extention__title fs-600 fw-medium">Add to Chrome</h3>
               <p class="extension__version text-neutral-700">
                 Minimum version 55
               </p>
-              <img src="images/bg-dots.svg" alt="" loading="lazy" />
+              <img
+                src="images/bg-dots.svg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
               <button class="button bg-primary-400">
                 Add & Install Extension
               </button>
@@ -305,12 +327,18 @@
                 alt="Opera logo"
                 loading="lazy"
                 class="extension-logo"
+                decoding="async"
               />
               <h3 class="extention__title fs-600 fw-medium">Add to Chrome</h3>
               <p class="extension__version text-neutral-700">
                 Minimum version 46
               </p>
-              <img src="images/bg-dots.svg" alt="" loading="lazy" />
+              <img
+                src="images/bg-dots.svg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
               <button class="button bg-primary-400">
                 Add & Install Extension
               </button>
@@ -583,6 +611,6 @@
       </button>
     </footer>
 
-    <script type="module" src="/main.js" defer></script>
+    <script type="module" src="/main.js" defer async></script>
   </body>
 </html>
