@@ -21,7 +21,7 @@
 
 :root {
   --clr-primary-100: hsl(0, 0%, 100%);
-  --clr-primary-400: hsl(231, 69%, 60%);
+  /*--clr-primary-400: hsl(231, 69%, 60%);*/
   --clr-primary-500: hsl(0, 94%, 66%);
   --clr-neutral-700: hsl(229, 8%, 60%);
   --clr-neutral-800: hsl(229, 31%, 21%);
@@ -540,7 +540,7 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5em;
+  gap: 3em;
 }
 
 .slider__col {
@@ -857,8 +857,10 @@ svg {
 .footer__left {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*align-items: center;*/
   gap: 2.5em;
+  width: 1000px;
+  
 }
 
 .footer__nav-list {
@@ -1229,3 +1231,12 @@ svg {
     align-self: flex-end;
   }
 }
+
+  .features__subheading.text-neutral-700 {
+    /*text-align: justify;*/
+    color: black;
+    font-size: 1.1em; 
+  }
+
+
+  
