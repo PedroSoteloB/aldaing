@@ -658,13 +658,13 @@ svg {
 
 .extension {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 2em 1em;
-  display: flex;
+  padding: 0.9em 0.92em;
+  display: grid;
   flex-direction: column;
   align-items: center;
-  gap: 1em;
-  border-radius: 10px;
-  width: 80%;
+  gap: 0.9em;
+  border-radius: 7px;
+  width: 700px;
 }
 
 .extension__version {
